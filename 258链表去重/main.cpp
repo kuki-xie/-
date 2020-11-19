@@ -6,6 +6,7 @@
 //
 
 #include <iostream>
+#include <cstring>
 #include <set>
 using namespace std;
 typedef struct Node{
@@ -15,7 +16,7 @@ typedef struct Node{
 }Node;
 int main(int argc, const char * argv[]) {
     // insert code here...
-    char begin[100];//
+    char begin;//
     int n;//结点个数
     int i;
     char temp[100];
@@ -23,7 +24,7 @@ int main(int argc, const char * argv[]) {
     cin>>begin>>n;//输入两个数，begin在前，n在后
     struct Node arr[n];//输入用的数组
     struct Node tmp[n];//排队后的链表
-    struct Node final[n];//去重后的链表
+    struct Node fin[n];//去重后的链表
     set<int> window;// set类型
     for(i=0;i<n;i++)
     {
@@ -47,19 +48,19 @@ int main(int argc, const char * argv[]) {
     for (i=0; i<n; i++) {
         if(window.insert(abs(tmp[i].key)).second)//插入第一个key的绝对值，second判断成功(set集合中不可以包含重复的元素，以此去重)
         {
-            strcpy(final[count].dest, tmp[i].dest);//将下一个结点的地址赋入
-            final[count].key= tmp[i].key;
-            strcpy(final[count].src,tmp[i].src);
+            strcpy(fin[count].dest, tmp[i].dest);//将下一个结点的地址赋入
+            fin[count].key= tmp[i].key;
+            strcpy(fin[count].src,tmp[i].src);
             count++;
         }
         else
         {
-            strcpy(final[count-1].dest,tmp[i].dest);//将下一结点的地址赋给回退的那个结点
+            strcpy(fin[count-1].dest,tmp[i].dest);//将下一结点的地址赋给回退的那个结点
         }
     }
     cout<<window.size()<<endl;//输出去重后的链表的长度
     for(i=0;i<window.size();i++){
-        cout<<final[i].src<<' '<<final[i].key<<' '<<final[i].dest<<endl;//按顺序输出去重后的链表
+        cout<<fin[i].src<<' '<<fin[i].key<<' '<<fin[i].dest<<endl;//按顺序输出去重后的链表
     }
     //std::cout << "Hello, World!\n";
     return 0;
