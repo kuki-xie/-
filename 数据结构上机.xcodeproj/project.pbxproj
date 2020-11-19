@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC1A9DE52562D08F0073C6EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1A9DE42562D08F0073C6EF /* main.cpp */; };
 		CC1A9DF32562D10D0073C6EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1A9DF22562D10D0073C6EF /* main.cpp */; };
+		CCCEEE472566918800FC4C5B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCCEEE462566918800FC4C5B /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		CCCEEE422566918800FC4C5B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +47,8 @@
 		CC1A9DE42562D08F0073C6EF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CC1A9DF02562D10D0073C6EF /* 258lianbiaoquchong */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 258lianbiaoquchong; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1A9DF22562D10D0073C6EF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CCCEEE442566918800FC4C5B /* 293报数出列问题 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "293报数出列问题"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCCEEE462566918800FC4C5B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCCEEE412566918800FC4C5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +81,7 @@
 			children = (
 				CC1A9DE32562D08F0073C6EF /* 数据结构上机 */,
 				CC1A9DF12562D10D0073C6EF /* 258链表去重 */,
+				CCCEEE452566918800FC4C5B /* 293报数出列问题 */,
 				CC1A9DE22562D08F0073C6EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +91,7 @@
 			children = (
 				CC1A9DE12562D08F0073C6EF /* 数据结构上机 */,
 				CC1A9DF02562D10D0073C6EF /* 258lianbiaoquchong */,
+				CCCEEE442566918800FC4C5B /* 293报数出列问题 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +110,14 @@
 				CC1A9DF22562D10D0073C6EF /* main.cpp */,
 			);
 			path = "258链表去重";
+			sourceTree = "<group>";
+		};
+		CCCEEE452566918800FC4C5B /* 293报数出列问题 */ = {
+			isa = PBXGroup;
+			children = (
+				CCCEEE462566918800FC4C5B /* main.cpp */,
+			);
+			path = "293报数出列问题";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +157,23 @@
 			productReference = CC1A9DF02562D10D0073C6EF /* 258lianbiaoquchong */;
 			productType = "com.apple.product-type.tool";
 		};
+		CCCEEE432566918800FC4C5B /* 293报数出列问题 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCCEEE4A2566918800FC4C5B /* Build configuration list for PBXNativeTarget "293报数出列问题" */;
+			buildPhases = (
+				CCCEEE402566918800FC4C5B /* Sources */,
+				CCCEEE412566918800FC4C5B /* Frameworks */,
+				CCCEEE422566918800FC4C5B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "293报数出列问题";
+			productName = "293报数出列问题";
+			productReference = CCCEEE442566918800FC4C5B /* 293报数出列问题 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -140,6 +186,9 @@
 						CreatedOnToolsVersion = 12.1;
 					};
 					CC1A9DEF2562D10D0073C6EF = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					CCCEEE432566918800FC4C5B = {
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
@@ -159,6 +208,7 @@
 			targets = (
 				CC1A9DE02562D08F0073C6EF /* 数据结构上机 */,
 				CC1A9DEF2562D10D0073C6EF /* 258lianbiaoquchong */,
+				CCCEEE432566918800FC4C5B /* 293报数出列问题 */,
 			);
 		};
 /* End PBXProject section */
@@ -177,6 +227,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC1A9DF32562D10D0073C6EF /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCCEEE402566918800FC4C5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCCEEE472566918800FC4C5B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +384,22 @@
 			};
 			name = Release;
 		};
+		CCCEEE482566918800FC4C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CCCEEE492566918800FC4C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -352,6 +426,15 @@
 			buildConfigurations = (
 				CC1A9DF52562D10D0073C6EF /* Debug */,
 				CC1A9DF62562D10D0073C6EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCCEEE4A2566918800FC4C5B /* Build configuration list for PBXNativeTarget "293报数出列问题" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCCEEE482566918800FC4C5B /* Debug */,
+				CCCEEE492566918800FC4C5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
