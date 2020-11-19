@@ -10,28 +10,29 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     int n=0;//表示序列长度
     int i;
-    //int final[n];//调整后的数组
-    //int count=0;
     cin >> n;//输入n,表示序列长度
+    int fin[n];//调整后的数组
     int arr[n];//原数组
+    int start = 0;//从左往右扫用
+    int end = n - 1;//从右往左扫用
     for(i = 0;i < n;i++){
         cin >> arr[i];//输入序列中的元素
     }
-    for(i = 0;i < n;i++){
-        cout << arr[i] << ' ';
-    }
     /*for(i = 0;i < n;i++){
-        if(arr[i] % 2 != 0){//为奇数
-            final[count++]=arr[i];
+        cout << arr[i] << ' ';
+    }*/
+    for(i = 1;i <= n;i++){
+        if(i % 2 != 0){//从左向右扫，若扫到奇数位置，
+            fin[start++]=arr[i];//则从左向右存储
+        }
+    }
+    for(i = n;i >= 1; i--){
+        if(i % 2 == 0){
+            fin[end--]=arr[i];
         }
     }
     for(i = 0;i < n;i++){
-        if(arr[i] % 2 == 0){//为偶数
-            final[count++]=arr[i];
-        }
+        cout<<fin[i]<<' ';
     }
-    for(i = 0;i < count;i++){
-        cout<<final[i]<<' '<<endl;
-    }*/
     return 0;
 }

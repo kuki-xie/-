@@ -16,7 +16,7 @@ typedef struct Node{
 }Node;
 int main(int argc, const char * argv[]) {
     // insert code here...
-    char begin;//
+    char begin[100];//链表的第一个结点的地址
     int n;//结点个数
     int i;
     char temp[100];
