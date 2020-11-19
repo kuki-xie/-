@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
             break;
         temp=count;
         count=0;
-        for(i = 1;i <= temp;i++){//第二轮从头开始，数到3的倍数的人出列
+        for(i = 1;i <= n;i++){//第二轮从头开始，数到3的倍数的人出列
             if(i % 3 != 0){//不是3的倍数，不出列的人
                 tmp[count].key=begin[count].key;//将初始队列的编号保存到此轮的队列
                 
