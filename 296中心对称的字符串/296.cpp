@@ -14,7 +14,7 @@ int main(int argc, const char * argv[]) {
     cin >> n;//第一行输入整数n,表示字符的个数，n小于100
     cin >> arr;
     int count = 0;//计数
-    //cout << arr << endl;
+    //cout << arr << endl;//检查输入
     for(i = 0;i < n;i++){
         if(arr[i] == arr [n - 1 - i]){//前后同时比较
             count++;//计数，判断是否扫描完，若中途停止则不对称
