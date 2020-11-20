@@ -38,6 +38,8 @@ int main(int argc, const char * argv[]) {
     for (iter = s.begin(); iter != s.end(); iter++) {//迭代器输出set中元素
         cout << *iter << ' ';
     }
+    return 0;
+
     /*int len = (a < b) ? a : b;//三元运算符,取L1和L2之间最短的长度
     if(a < b){//L1数组比L2数组短
         for (i = len; i < b; i++) {
@@ -52,5 +54,4 @@ int main(int argc, const char * argv[]) {
     for (i = 0; i < count; i++) {//输出合并去重后的结果。
         cout << fin[i] << ' ';
     }*/
-    return 0;
 }
