@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
     for(i = 0;i < n;i++){
         cin >> arr[i];//输入序列中的元素
     }
-    /*for(i = 0;i < n;i++){
+    /*for(i = 0;i < n;i++){//检查输入
         cout << arr[i] << ' ';
     }*/
     for(i = 0;i <= n;i++){
