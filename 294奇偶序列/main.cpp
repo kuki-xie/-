@@ -11,8 +11,8 @@ int main(int argc, const char * argv[]) {
     int n=0;//表示序列长度
     int i;
     cin >> n;//输入n,表示序列长度
-    int fin[n];//调整后的数组
-    int arr[n];//原数组
+    int fin[101];//调整后的数组
+    int arr[101];//原数组
     int start = 0;//从左往右扫用
     int end = n - 1;//从右往左扫用
     for(i = 0;i < n;i++){
@@ -21,13 +21,13 @@ int main(int argc, const char * argv[]) {
     /*for(i = 0;i < n;i++){
         cout << arr[i] << ' ';
     }*/
-    for(i = 1;i <= n;i++){
-        if(i % 2 != 0){//从左向右扫，若扫到奇数位置，
+    for(i = 0;i <= n;i++){
+        if((i + 1) % 2 != 0){//从左向右扫，若扫到奇数位置，
             fin[start++]=arr[i];//则从左向右存储
         }
     }
-    for(i = n;i >= 1; i--){
-        if(i % 2 == 0){
+    for(i = n - 1;i >= 0; i--){
+        if((i + 1) % 2 == 0){
             fin[end--]=arr[i];
         }
     }
