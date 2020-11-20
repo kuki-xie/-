@@ -10,13 +10,10 @@ using namespace std
 int main(int argc, const char * argv[]) {
     int n;//表示字符的个数
     int i;
-    cin >> n;//第一行输入整数n,表示字符的个数，n小于100
     char arr[100];//输入的字符串数组
-    for(i = 0;i < n;i++){
-        cin >> arr[i];
-    }
-    for(i=0;i<n;i++){
-        cout << arr[i] << endl;
-    }
+    cin >> n;//第一行输入整数n,表示字符的个数，n小于100
+    cin >> arr;
+    cout << arr << endl;
+
     return 0;
 }
