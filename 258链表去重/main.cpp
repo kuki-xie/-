@@ -22,9 +22,9 @@ int main(int argc, const char * argv[]) {
     char temp[100];
     int count = 0;//去重后的链表内的数量
     cin>>begin>>n;//输入两个数，begin在前，n在后
-    struct Node arr[n];//输入用的数组
-    struct Node tmp[n];//排队后的链表
-    struct Node fin[n];//去重后的链表
+    struct Node arr[101];//输入用的数组
+    struct Node tmp[101];//排队后的链表
+    struct Node fin[101];//去重后的链表
     set<int> window;// set类型
     for(i=0;i<n;i++)
     {
