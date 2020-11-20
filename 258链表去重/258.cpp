@@ -62,6 +62,5 @@ int main(int argc, const char * argv[]) {
     for(i=0;i<window.size();i++){
         cout<<fin[i].src<<' '<<fin[i].key<<' '<<fin[i].dest<<endl;//按顺序输出去重后的链表
     }
-    //std::cout << "Hello, World!\n";
     return 0;
 }
