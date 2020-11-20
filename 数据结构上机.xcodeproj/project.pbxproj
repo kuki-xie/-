@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CC1A9DE52562D08F0073C6EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1A9DE42562D08F0073C6EF /* main.cpp */; };
-		CC1A9DF32562D10D0073C6EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1A9DF22562D10D0073C6EF /* main.cpp */; };
-		CC4E79B62567E23A00C67871 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC4E79B52567E23A00C67871 /* main.cpp */; };
-		CCCEEE472566918800FC4C5B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCCEEE462566918800FC4C5B /* main.cpp */; };
-		CCCEEE552566A37000FC4C5B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCCEEE542566A37000FC4C5B /* main.cpp */; };
-		CCFA0F532567EDDE00ACF3E1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCFA0F522567EDDE00ACF3E1 /* main.cpp */; };
-		CCFA0F642567F1A300ACF3E1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCFA0F632567F1A300ACF3E1 /* main.cpp */; };
+		CC1A9DF32562D10D0073C6EF /* 258.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1A9DF22562D10D0073C6EF /* 258.cpp */; };
+		CC4E79B62567E23A00C67871 /* 296.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC4E79B52567E23A00C67871 /* 296.cpp */; };
+		CCCEEE472566918800FC4C5B /* 293.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCCEEE462566918800FC4C5B /* 293.cpp */; };
+		CCCEEE552566A37000FC4C5B /* 294.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCCEEE542566A37000FC4C5B /* 294.cpp */; };
+		CCFA0F532567EDDE00ACF3E1 /* 297.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCFA0F522567EDDE00ACF3E1 /* 297.cpp */; };
+		CCFA0F642567F1A300ACF3E1 /* 295.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCFA0F632567F1A300ACF3E1 /* 295.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,17 +86,17 @@
 		CC1A9DE12562D08F0073C6EF /* 数据结构上机 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "数据结构上机"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1A9DE42562D08F0073C6EF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CC1A9DF02562D10D0073C6EF /* 258lianbiaoquchong */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 258lianbiaoquchong; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC1A9DF22562D10D0073C6EF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CC1A9DF22562D10D0073C6EF /* 258.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 258.cpp; sourceTree = "<group>"; };
 		CC4E79B32567E23A00C67871 /* 296中心对称的字符串 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "296中心对称的字符串"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC4E79B52567E23A00C67871 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CC4E79B52567E23A00C67871 /* 296.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 296.cpp; sourceTree = "<group>"; };
 		CCCEEE442566918800FC4C5B /* 293报数出列问题 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "293报数出列问题"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCCEEE462566918800FC4C5B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CCCEEE462566918800FC4C5B /* 293.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 293.cpp; sourceTree = "<group>"; };
 		CCCEEE522566A37000FC4C5B /* 294奇偶序列 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "294奇偶序列"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCCEEE542566A37000FC4C5B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CCCEEE542566A37000FC4C5B /* 294.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 294.cpp; sourceTree = "<group>"; };
 		CCFA0F502567EDDE00ACF3E1 /* 297最小周期串 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "297最小周期串"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCFA0F522567EDDE00ACF3E1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CCFA0F522567EDDE00ACF3E1 /* 297.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 297.cpp; sourceTree = "<group>"; };
 		CCFA0F612567F1A300ACF3E1 /* 295有序表的合并去重 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "295有序表的合并去重"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCFA0F632567F1A300ACF3E1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CCFA0F632567F1A300ACF3E1 /* 295.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 295.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +191,7 @@
 		CC1A9DF12562D10D0073C6EF /* 258链表去重 */ = {
 			isa = PBXGroup;
 			children = (
-				CC1A9DF22562D10D0073C6EF /* main.cpp */,
+				CC1A9DF22562D10D0073C6EF /* 258.cpp */,
 			);
 			path = "258链表去重";
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 		CC4E79B42567E23A00C67871 /* 296中心对称的字符串 */ = {
 			isa = PBXGroup;
 			children = (
-				CC4E79B52567E23A00C67871 /* main.cpp */,
+				CC4E79B52567E23A00C67871 /* 296.cpp */,
 			);
 			path = "296中心对称的字符串";
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 		CCCEEE452566918800FC4C5B /* 293报数出列问题 */ = {
 			isa = PBXGroup;
 			children = (
-				CCCEEE462566918800FC4C5B /* main.cpp */,
+				CCCEEE462566918800FC4C5B /* 293.cpp */,
 			);
 			path = "293报数出列问题";
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 		CCCEEE532566A37000FC4C5B /* 294奇偶序列 */ = {
 			isa = PBXGroup;
 			children = (
-				CCCEEE542566A37000FC4C5B /* main.cpp */,
+				CCCEEE542566A37000FC4C5B /* 294.cpp */,
 			);
 			path = "294奇偶序列";
 			sourceTree = "<group>";
@@ -223,7 +223,7 @@
 		CCFA0F512567EDDE00ACF3E1 /* 297最小周期串 */ = {
 			isa = PBXGroup;
 			children = (
-				CCFA0F522567EDDE00ACF3E1 /* main.cpp */,
+				CCFA0F522567EDDE00ACF3E1 /* 297.cpp */,
 			);
 			path = "297最小周期串";
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 		CCFA0F622567F1A300ACF3E1 /* 295有序表的合并去重 */ = {
 			isa = PBXGroup;
 			children = (
-				CCFA0F632567F1A300ACF3E1 /* main.cpp */,
+				CCFA0F632567F1A300ACF3E1 /* 295.cpp */,
 			);
 			path = "295有序表的合并去重";
 			sourceTree = "<group>";
@@ -426,7 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC1A9DF32562D10D0073C6EF /* main.cpp in Sources */,
+				CC1A9DF32562D10D0073C6EF /* 258.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC4E79B62567E23A00C67871 /* main.cpp in Sources */,
+				CC4E79B62567E23A00C67871 /* 296.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCCEEE472566918800FC4C5B /* main.cpp in Sources */,
+				CCCEEE472566918800FC4C5B /* 293.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCCEEE552566A37000FC4C5B /* main.cpp in Sources */,
+				CCCEEE552566A37000FC4C5B /* 294.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCFA0F532567EDDE00ACF3E1 /* main.cpp in Sources */,
+				CCFA0F532567EDDE00ACF3E1 /* 297.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCFA0F642567F1A300ACF3E1 /* main.cpp in Sources */,
+				CCFA0F642567F1A300ACF3E1 /* 295.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

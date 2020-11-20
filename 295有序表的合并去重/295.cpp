@@ -25,28 +25,28 @@ int main(int argc, const char * argv[]) {
     for (i = 0; i < b; i++) {
         cout << L2[i];
     }*/
-    int count = 0;
+    int count = 0;//用来记输出数组fin的长度
     int fin[200];//合并去重后输出用
-    int len = (a < b) ? a : b;//三元运算符,fin数组取L1和L2之间最短的长度
-    for (i = 0; i < len; i++) {
-        if(L1[i] <= L2[i]){//如果相应位置L1元素比L2小，则存入L1的元素
+    int len = (a < b) ? a : b;//三元运算符,取L1和L2之间最短的长度
+    for (i = 0; i < len; i++) {//先比较各自的前len项
+        if(L1[i] < L2[i] || L1[i] == L2[i]){//如果相应位置L1元素比L2小或相等，则存入L1的元素
             fin[count++]=L1[i];
         }
-        else//相应位置L1元素比L2元素大，则存入L2的元素
-            fin[count++]=L2[i];//如果L2比L1大，则存入L2;
+        else if(L1[i] > L2[i])//相应位置L1元素比L2元素大，则存入L2的元素
+            fin[count++]=L2[i];
     }
     if(a < b){//L1数组比L2数组短
-        for (i = len; i < = b; i++) {
+        for (i = len; i < b; i++) {
             fin[count++]=L2[i];
         }
     }
     else if(a > b){//L2数组比L1数组短
-        for (i = len; i < = a; i++) {
+        for (i = len; i < a; i++) {
             fin[count++]=L1[i];
         }
     }
     for (i = 0; i < count; i++) {//输出合并去重后的结果。
-        cout >> fin[i] >> ' ';
+        cout << fin[i] << ' ';
     }
     return 0;
 }
