@@ -5,7 +5,78 @@
 //  Created by 谢容海 on 2020/11/19.
 //
 
-#include <iostream>
+#include<stdio.h>
+typedef struct Node {
+    int prm;
+    int data;
+    int next;
+} Node;
+Node Lnode[5001];//初始人数，N<=5000
+int main() {
+    for(int i=1; i<=5000; i++) {
+        Lnode[i].prm = i-1;
+        Lnode[i].data = i;
+        Lnode[i].next = i+1;
+    }
+    Lnode[0].data = 0;
+    Lnode[0].next = -1;
+    int n;
+    scanf("%d",&n);
+    if(n==3){
+        printf("1 2 3");
+        return 0;
+    }
+    if(n==2){
+        printf("1 2");
+        return 0;
+    }
+    if(n==1){
+        printf("1");
+        return 0;
+    }
+    Lnode[n].next = 0;
+    int turn=0;
+    while(n>3) {
+        int i=1;
+        if(turn==0) {
+            int count = 1;
+            while(i!=0) {
+                if(count%2==0) {
+                    Lnode[Lnode[i].prm].next = Lnode[i].next;
+                    Lnode[Lnode[i].next].prm = Lnode[i].prm;
+                    n--;
+                }
+                count++;
+                i = Lnode[i].next;
+            }
+            turn = 1;
+        } else    if(turn==1) {
+            int count = 1;
+            i = 1;
+            while(i!=0) {
+                if(count%3==0) {
+                    Lnode[Lnode[i].prm].next = Lnode[i].next;
+                    Lnode[Lnode[i].next].prm = Lnode[i].prm;
+                    n--;
+
+                }
+                i = Lnode[i].next;
+                count++;
+            }
+            turn = 0;
+        }
+    }
+    if(n==3){
+        printf("%d %d %d",Lnode[1].data,Lnode[Lnode[1].next].data,Lnode[Lnode[Lnode[1].next].next].data);
+    }else if(n==2){
+        printf("%d %d",Lnode[1].data,Lnode[Lnode[1].next].data);
+    }else if(n==1){
+        printf("1");
+    }
+    
+}
+
+/*#include <iostream>
 typedef struct People{
     int key;
 }people;
@@ -37,4 +108,4 @@ int main(int argc, const char * argv[]) {
     
     //std::cout << "Hello, World!\n";
     return 0;
-}
+}*/
