@@ -9,7 +9,7 @@
 using namespace std;
 typedef struct node{
     int row;//定义行
-    int cow;//定义列
+    int col;//定义列
     int data;//定义元素所含值
 }node;
 int main(int argc, const char * argv[]) {
@@ -39,11 +39,12 @@ int main(int argc, const char * argv[]) {
         for (j = 0; j < n; j++) {//寻找i行中的最小值
             if(min > arr[i][j]){//如果第i行有比初始定义的min更小的，就用这个去替换
                 min = arr[i][j];
+                printf("i=%d j=%d\n",i,j);
                 a = j;//a代表当前行中最小的列数
             }
         }
         
-        int max= arr[0][a];//初始定义其为上面所找的最小值所在列的第a列中的最大值
+        int max= arr[i][a];//初始定义其为上面所找的最小值所在列的第a列中的最大值
         for(k = 0; k < m; k++){//寻找第j列中的最大值
             if(max < arr[k][a]){//如果第j列有比初始定义的max更大的，则将其赋值为最大值
                 max = arr[k][a];
@@ -51,10 +52,12 @@ int main(int argc, const char * argv[]) {
             }
         }
         if (max == min) {
-            ans[count].row = a;//存储所找的行数
-            ans[count].cow = b;//存储所找的列数
+            ans[count].row = b;//存储所找的行数
+            ans[count].col = a;//存储所找的列数
             ans[count].data = max;//存储所找的值
             count++;
+            a = 0;
+            b = 0;
         }
     }
     //处理输出
@@ -63,7 +66,7 @@ int main(int argc, const char * argv[]) {
     }
     else{
         for (i = 0; i < count; i++) {
-            cout << ans[i].row + 1<< ' ' << ans[i].cow + 1<< ans[i].data << endl;
+            cout << ans[i].row + 1<< ' ' << ans[i].col + 1<< ans[i].data << endl;
         }
     }
     //std::cout << "Hello, World!\n";
