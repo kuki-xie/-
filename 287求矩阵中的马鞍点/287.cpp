@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
     int arr[5][5];//储存输入的矩阵中的元素值
     //输入
     cin >> n >> m;//输入矩阵的维数，m为行数，n为列数
-    int i,j;
+    int i,j,k;
     for(i = 0;i < m; i++){//通过二维数组输入并存储二维矩阵的元素值
         for (j = 0; j < n; j++) {
             cin >> arr[i][j];//i代表行，j代表列
@@ -34,7 +34,6 @@ int main(int argc, const char * argv[]) {
     node ans[50];//用来存储所找到马鞍点的信息
     int a = 0;//a代表最小值所在列
     int b = 0;//b代表最大值所在行
-    int k = 0;
     for (i = 0; i < m; i++) {
         int min = arr[i][0];//初始定义第i行中的最小值
         for (j = 0; j < n; j++) {//寻找i行中的最小值

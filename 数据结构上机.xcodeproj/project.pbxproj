@@ -11,7 +11,7 @@
 		CC1A9DF32562D10D0073C6EF /* 258.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1A9DF22562D10D0073C6EF /* 258.cpp */; };
 		CC4E79B62567E23A00C67871 /* 296.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC4E79B52567E23A00C67871 /* 296.cpp */; };
 		CC9D0828256BCDB7005DB895 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC9D0827256BCDB7005DB895 /* main.cpp */; };
-		CC9D083B256BD84B005DB895 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC9D083A256BD84B005DB895 /* main.cpp */; };
+		CC9D083B256BD84B005DB895 /* 287.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC9D083A256BD84B005DB895 /* 287.cpp */; };
 		CCCEEE472566918800FC4C5B /* 293.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCCEEE462566918800FC4C5B /* 293.cpp */; };
 		CCCEEE552566A37000FC4C5B /* 294.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCCEEE542566A37000FC4C5B /* 294.cpp */; };
 		CCFA0F532567EDDE00ACF3E1 /* 297.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCFA0F522567EDDE00ACF3E1 /* 297.cpp */; };
@@ -112,7 +112,7 @@
 		CC9D0825256BCDB7005DB895 /* 292huffman编码 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "292huffman编码"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9D0827256BCDB7005DB895 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CC9D0838256BD84B005DB895 /* 287求矩阵中的马鞍点 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "287求矩阵中的马鞍点"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC9D083A256BD84B005DB895 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CC9D083A256BD84B005DB895 /* 287.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 287.cpp; sourceTree = "<group>"; };
 		CCCEEE442566918800FC4C5B /* 293报数出列问题 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "293报数出列问题"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCEEE462566918800FC4C5B /* 293.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 293.cpp; sourceTree = "<group>"; };
 		CCCEEE522566A37000FC4C5B /* 294奇偶序列 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "294奇偶序列"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,7 +257,7 @@
 		CC9D0839256BD84B005DB895 /* 287求矩阵中的马鞍点 */ = {
 			isa = PBXGroup;
 			children = (
-				CC9D083A256BD84B005DB895 /* main.cpp */,
+				CC9D083A256BD84B005DB895 /* 287.cpp */,
 			);
 			path = "287求矩阵中的马鞍点";
 			sourceTree = "<group>";
@@ -550,7 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9D083B256BD84B005DB895 /* main.cpp in Sources */,
+				CC9D083B256BD84B005DB895 /* 287.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
