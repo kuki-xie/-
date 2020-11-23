@@ -41,7 +41,7 @@ int main(int argc, const char * argv[]){
         int i=1;//i表示初始队列中的人的编号
         if(turn==0) {
             int count = 1;//count表示人在这个changing队列中的编号
-            while(i!=0) {
+            while(i!=0) {//表示人到了队尾完成了一次查找
                 if(count%2==0) {//如果此人是2的倍数
                     Lnode[Lnode[i].prm].next = Lnode[i].next;//此人即将出列，它的下一人编号赋给它的前一人
                     Lnode[Lnode[i].next].prm = Lnode[i].prm;//它的下一人的前一人编号赋给它前一人
