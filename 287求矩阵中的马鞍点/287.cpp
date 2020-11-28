@@ -15,7 +15,7 @@ typedef struct node{
 int main(int argc, const char * argv[]) {
     // insert code here...
     int n,m;//为矩阵维数
-    int arr[5][5];//储存输入的矩阵中的元素值
+    int arr[50][50];//储存输入的矩阵中的元素值
     //输入
     cin >> n >> m;//输入矩阵的维数，m为行数，n为列数
     int i,j,k;
@@ -35,15 +35,16 @@ int main(int argc, const char * argv[]) {
     int a = 0;//a代表最小值所在列
     int b = 0;//b代表最大值所在行
     for (i = 0; i < m; i++) {
+        a = 0;
         int min = arr[i][0];//初始定义第i行中的最小值
         for (j = 0; j < n; j++) {//寻找i行中的最小值
             if(min > arr[i][j]){//如果第i行有比初始定义的min更小的，就用这个去替换
                 min = arr[i][j];
-                printf("i=%d j=%d\n",i,j);
+                //printf("i=%d j=%d\n",i,j);//检查
                 a = j;//a代表当前行中最小的列数
             }
         }
-        
+        b = i;
         int max= arr[i][a];//初始定义其为上面所找的最小值所在列的第a列中的最大值
         for(k = 0; k < m; k++){//寻找第j列中的最大值
             if(max < arr[k][a]){//如果第j列有比初始定义的max更大的，则将其赋值为最大值
@@ -56,7 +57,6 @@ int main(int argc, const char * argv[]) {
             ans[count].col = a;//存储所找的列数
             ans[count].data = max;//存储所找的值
             count++;
-            a = 0;
             b = 0;
         }
     }
@@ -66,7 +66,7 @@ int main(int argc, const char * argv[]) {
     }
     else{
         for (i = 0; i < count; i++) {
-            cout << ans[i].row + 1<< ' ' << ans[i].col + 1<< ans[i].data << endl;
+            cout << ans[i].row + 1<< ' ' << ans[i].col + 1 << ' ' << ans[i].data << endl;
         }
     }
     //std::cout << "Hello, World!\n";
