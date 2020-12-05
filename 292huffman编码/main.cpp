@@ -78,8 +78,7 @@ int main(void){
     //创建链表
     Linklist *head=create(array,n);
     Linklist *p;
-    //计算频度
-    count=0;
+    count=0;//表示路径长度
     while(head->next->next!=NULL){
         sum1=head->next->data;
         head=delHead(head);
