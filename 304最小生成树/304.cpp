@@ -23,10 +23,10 @@ struct {
 
 int count_e;//记录最小生成树的边数
 
-int cmp(const void * a,const void * b){//排序函数，定义按边的权值大小从小到大排序
-    return ((Edge *)a) -> wei - ((Edge *)b) -> wei;
+int cmp(const void* a,const void* b){//排序函数，定义按边的权值大小从小到大排序
+    return (*(Edge *)a).wei - (*(Edge *)b).wei;
 }
-
+ 
 int find_vex(int vexnum,int point){//寻找边的两个顶点
     for (int i = 0; i < vexnum; i++) {//对所有顶点遍历
         if (assist[i].value == point) {//若找到所找的顶点，返回编号
