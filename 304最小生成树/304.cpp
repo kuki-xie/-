@@ -23,10 +23,10 @@ struct {
 
 int count_e;//记录最小生成树的边数
 
-bool cmp(const void * a, const void * b){//排序函数，定义按边的权值大小从小到大排序
-    return ((struct Edge *)a) -> wei - ((struct Edge *)b) -> wei;
+int cmp(const void * a,const void * b){//排序函数，定义按边的权值大小从小到大排序
+    return ((Edge *)a) -> wei - ((Edge *)b) -> wei;
 }
-int f[MAX];// 判断是否形成回路时使用
+
 int find_vex(int vexnum,int point){//寻找边的两个顶点
     for (int i = 0; i < vexnum; i++) {//对所有顶点遍历
         if (assist[i].value == point) {//若找到所找的顶点，返回编号
@@ -61,6 +61,7 @@ int main(int argc, const char * argv[]) {
     /*for (i = 0; i < m; i++) {//检查输入的边信息
         cout << edge[i].v1 << ' ' << edge[i].v2 << ' ' << edge[i].wei << endl;
     }*/
+    sort(edges, edges + m, cmp);//对无向网中所有的边按边的权值进行升序排列，结果仍存储在edge中
     int count_v = 0;
     set<int>::iterator iter;// 将set中顶点的信息存入assist结构体数组，后面判断是否形成回路用
     for (iter = vex_t.begin(); iter != vex_t.end(); iter++) {// 已给了顶点数为n，所以也可以直接i < n作为判断条件
@@ -70,7 +71,7 @@ int main(int argc, const char * argv[]) {
     }
     Edge miniTree[MAX];//创建一个空的结构体数组，用来存储最小生成树的
     int num = 0;//用来记录最小生成树
-    sort(edges, edges + m, cmp);//对无向网中所有的边按边的权值进行升序排列，结果仍存储在edge中
+
     for (i = 0; i < m; i++) {//对所有的边进行遍历
         int initial = find_vex(n,edges[i].v1);//找到该边的第一个顶点的编号
         int end = find_vex(n, edges[i].v2);
