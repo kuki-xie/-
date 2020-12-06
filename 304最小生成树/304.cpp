@@ -54,7 +54,7 @@ int main(int argc, const char * argv[]) {
         cout << edge[i].v1 << ' ' << edge[i].v2 << ' ' << edge[i].wei << endl;
     }*/
     int count_v = 0;
-    set<int>::iterator iter;// 检查set是否存储顶点成功
+    set<int>::iterator iter;// 将set中顶点的信息存入assist结构体数组，后面判断是否形成回路用
     for (iter = vex_t.begin(); iter != vex_t.end(); iter++) {// 已给了顶点数为n，所以也可以直接i < n作为判断条件
          assist[count_v++] = *iter;
     }
