@@ -73,24 +73,26 @@ int main(int argc, const char * argv[]) {
     for (i = 0; i < arcnum; i++) {//对所有的边进行遍历
         int initial = find_vex(vexnum,edges[i].v1);//找到该边的第一个顶点的编号
         int end = find_vex(vexnum, edges[i].v2);
+        //cout << i << "initial=" << initial << "end=" << end << endl;//检查find_vex是否有问题
+        
         //如果顶点位置存在且顶点的标记不同，说明不在一个集合中
-        if(initial != -1 && end != -1 && assist[i].camp != assist[i].camp){
+        
+        if(initial != -1 && end != -1 && assist[initial].camp != assist[end].camp){
             miniTree[num] = edges[i];//将该边作为最小生成树的组成部分
             num++;//计数+1
             for(int j = 0; j < vexnum; j++){//将新加入的顶点的标记全部更改为一样
-                if(assist[j].camp == assist[end].camp){//如果有顶点标记与新加入边尾的标记相同
-                    assist[j].camp = assist[initial].camp;// 将该顶点标记改为边的第一个顶点的标记
+                if(assist[j].camp == assist[end].camp){//如果有顶点标记与新加入边的一个顶点v2的标记相同的
+                    assist[j].camp = assist[initial].camp;// 全部改为边的边的另一个顶点的标记
                 }
             }
             if (num == vexnum-1) {//如果选择的边的数量和顶点数相差1，说明最小生成树已经形成，退出循环
                 break;
             }
         }
-        
     }
     //输出
     for(i = 0; i < vexnum - 1; i++){
-        cout << miniTree[i].v1 << ' '<< miniTree[i].v2 << miniTree[i].wei << endl;
+        cout << miniTree[i].v1 << ' '<< miniTree[i].v2 << ' ' << miniTree[i].wei << endl;
     }
     
     //std::cout << "Hello, World!\n";
