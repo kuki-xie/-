@@ -31,17 +31,28 @@ int main(int argc, const char * argv[]) {
             sc.push(*arr);// 是括号的左部分则压栈
         }
         else if (*arr == ')'){// 遇到')'
-            if (sc.top() != '(' || sc.empty()) {// 看栈顶元素不是它的左半部分或此栈此刻不含元素
+            // 貌似是其他的错
+            /**
+             sc.top()会在sc为空时报错，分开判断
+             */
+            if (sc.empty()) {// 看栈顶元素不是它的左半部分或此栈此刻不含元素
                 flag = false;// 更改标志为错误
                 break;// 跳出循环
             }
-            else{//是，则弹栈
-                sc.pop();
+            else if(sc.top() != '('){//是，则弹栈
+                flag = false;// 更改标志为错误
+                break;// 跳出循环
             }
+            else
+                sc.pop();
         }
         else if (*arr == ']') {// 遇到']'
             // .empty(): true if the underlying container is empty, false otherwise
-            if (sc.top() != '[' || sc.empty()) {// 看栈顶元素不是它的左半部分或此栈此刻否含元素
+            if (sc.empty()) {// 看栈顶元素不是它的左半部分或此栈此刻否含元素
+                flag = false;// 更改标志为错误
+                break;// 跳出循环
+            }
+            else if(sc.top() != '['){
                 flag = false;// 更改标志为错误
                 break;// 跳出循环
             }
@@ -50,7 +61,11 @@ int main(int argc, const char * argv[]) {
             }
         }
         else if (*arr == '}') {// 遇到'}'
-            if (sc.top() != '{' || sc.empty()) {// 看栈顶元素不是它的左半部分或此栈此刻不含元素
+            if (sc.empty()) {// 看栈顶元素不是它的左半部分或此栈此刻不含元素
+                flag = false;// 更改标志为错误
+                break;
+            }
+            else if(sc.top() != '{'){
                 flag = false;// 更改标志为错误
                 break;
             }
