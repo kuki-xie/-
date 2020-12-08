@@ -10,7 +10,10 @@
 using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
-    char* arr = ;// 逆波兰式
+    char str[100];
+    char* arr = str;// 逆波兰式
+    cin >> arr;
+    // cout << arr << endl;
     stack<int> a;// 栈
     int left;// 左操作数
     int right;// 右操作数
