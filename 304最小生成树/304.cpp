@@ -1,35 +1,36 @@
 //
 //  main.cpp
-//  304最小生成树
+//  304◊Ó–°…˙≥… ˜
 //
-//  Created by 谢容海 on 2020/12/5.
+//  Created by –ª»›∫£ on 2020/12/5.
 //
 
 #include <iostream>
 #include <algorithm>
 #include <set>
-#define MAX 100//n,m最大都不超过100
+#define MAX 100//n,m◊Ó¥Û∂º≤ª≥¨π˝100
 using namespace std;
 
-struct Edge{
-    int v1;// 分别表示第一顶点，
-    int v2;// 第二个顶点
-    int wei;// 边上的权值
-}edge[MAX];//存储边的信息
+struct Edge {
+    int v1;// ∑÷±±Ì æµ⁄“ª∂•µ„£¨
+    int v2;// µ⁄∂˛∏ˆ∂•µ„
+    int wei;// ±ﬂ…œµƒ»®÷µ
+}edge[MAX];//¥Ê¥¢±ﬂµƒ–≈œ¢
 struct {
-    int value;// 顶点的数据
-    int camp;// 表示每个顶点所属的集合
+    int value;// ∂•µ„µƒ ˝æ›
+    int camp;// ±Ì æ√ø∏ˆ∂•µ„À˘ ÙµƒºØ∫œ
+    int use;    //∏√µ„ «∑Ò±ªº”»Î
 }assist[MAX];
 
-int count_e;//记录最小生成树的边数
+int count_e;//º«¬º◊Ó–°…˙≥… ˜µƒ±ﬂ ˝
 
-bool cmp(Edge a,Edge b){//排序函数，定义按边的权值大小从小到大排序
+bool cmp(Edge a, Edge b) {//≈≈–Ú∫Ø ˝£¨∂®“Â∞¥±ﬂµƒ»®÷µ¥Û–°¥”–°µΩ¥Û≈≈–Ú
     return a.wei < b.wei;
 }
- 
-int find_vex(int vexnum,int point){//寻找边的两个顶点
-    for (int i = 0; i < vexnum; i++) {//对所有顶点遍历
-        if (assist[i].value == point) {//若找到所找的顶点，返回编号
+
+int find_vex(int vexnum, int point) {//—∞’“±ﬂµƒ¡Ω∏ˆ∂•µ„
+    for (int i = 0; i < vexnum; i++) {//∂‘À˘”–∂•µ„±È¿˙
+        if (assist[i].value == point) {//»Ù’“µΩÀ˘’“µƒ∂•µ„£¨∑µªÿ±‡∫≈
             return i;
         }
     }
@@ -38,63 +39,76 @@ int find_vex(int vexnum,int point){//寻找边的两个顶点
 
 int main(int argc, const char * argv[]) {
     /**
-     完成输入操作
-     */
-    int vexnum,arcnum;//分别表示顶点数和边数
+    ÕÍ≥… ‰»Î≤Ÿ◊˜
+    */
+    int vexnum, arcnum;//∑÷±±Ì æ∂•µ„ ˝∫Õ±ﬂ ˝
     int i;
-    set<int> vex_t;//使用set容器去重储存输入的顶点
-    //int v1,v2,wei;
-    cin >> vexnum >> arcnum;//第一行为两个正整数n和m,分别表示顶点数和边数
-    Edge edges[MAX];//创建一个结构体数组用来存储输入的边的信息
-    for (i = 0; i < arcnum; i++) {//输入m行边的信息
+    set<int> vex_t;// π”√set»›∆˜»•÷ÿ¥¢¥Ê ‰»Îµƒ∂•µ„
+                   //int v1,v2,wei;
+    cin >> vexnum >> arcnum;//µ⁄“ª––Œ™¡Ω∏ˆ’˝’˚ ˝n∫Õm,∑÷±±Ì æ∂•µ„ ˝∫Õ±ﬂ ˝
+    Edge edges[MAX];//¥¥Ω®“ª∏ˆΩ·ππÃÂ ˝◊È”√¿¥¥Ê¥¢ ‰»Îµƒ±ﬂµƒ–≈œ¢
+    for (i = 0; i < arcnum; i++) {// ‰»Îm––±ﬂµƒ–≈œ¢
         cin >> edges[i].v1 >> edges[i].v2 >> edges[i].wei;
         vex_t.insert(edges[i].v1);
         vex_t.insert(edges[i].v2);
     }
-    sort(edges, edges + arcnum, cmp);//对无向网中所有的边按边的权值进行升序排列，结果仍存储在edge中
-    
-    /*for (i = 0; i < arcnum; i++) {//检查输入和sort排序后的边信息
-        cout << edges[i].v1 << ' ' << edges[i].v2 << ' ' << edges[i].wei << endl;
-    }*/
+    sort(edges, edges + arcnum, cmp);//∂‘ŒﬁœÚÕ¯÷–À˘”–µƒ±ﬂ∞¥±ﬂµƒ»®÷µΩ¯––…˝–Ú≈≈¡–£¨Ω·π˚»‘¥Ê¥¢‘⁄edge÷–
+
+                                     /*for (i = 0; i < arcnum; i++) {//ºÏ≤È ‰»Î∫Õsort≈≈–Ú∫Ûµƒ±ﬂ–≈œ¢
+                                     cout << edges[i].v1 << ' ' << edges[i].v2 << ' ' << edges[i].wei << endl;
+                                     }*/
     int count_v = 0;
-    set<int>::iterator iter;// 将set中顶点的信息存入assist结构体数组，后面判断是否形成回路用
-    for (iter = vex_t.begin(); iter != vex_t.end(); iter++) {// 已给了顶点数为n，所以也可以直接i < n作为判断条件
-        assist[count_v].value = *iter;// 将顶点信息存入assist中
-        assist[count_v].camp = count_v;// 该顶点的初始标记
+    set<int>::iterator iter;// Ω´set÷–∂•µ„µƒ–≈œ¢¥Ê»ÎassistΩ·ππÃÂ ˝◊È£¨∫Û√Ê≈–∂œ «∑Ò–Œ≥…ªÿ¬∑”√
+    for (iter = vex_t.begin(); iter != vex_t.end(); iter++) {// “—∏¯¡À∂•µ„ ˝Œ™n£¨À˘“‘“≤ø…“‘÷±Ω”i < n◊˜Œ™≈–∂œÃıº˛
+        assist[count_v].value = *iter;// Ω´∂•µ„–≈œ¢¥Ê»Îassist÷–
+        assist[count_v].camp = count_v;// ∏√∂•µ„µƒ≥ı º±Íº«
+        assist[count_v].use = 0;
         count_v++;
     }
-    /*for (i = 0; i < count_v; i++) {//检查存入assist是否正确
-        cout << assist[i].value << ' ' << assist[i].camp << endl;
+    /*for (i = 0; i < count_v; i++) {//ºÏ≤È¥Ê»Îassist «∑Ò’˝»∑
+    cout << assist[i].value << ' ' << assist[i].camp << endl;
     }*/
-    
-    Edge miniTree[MAX];//创建一个空的结构体数组，用来存储最小生成树的
-    int num = 0;//用来记录最小生成树
 
-    for (i = 0; i < arcnum; i++) {//对所有的边进行遍历
-        int initial = find_vex(vexnum,edges[i].v1);//找到该边的第一个顶点的编号
+    Edge miniTree[MAX];//¥¥Ω®“ª∏ˆø’µƒΩ·ππÃÂ ˝◊È£¨”√¿¥¥Ê¥¢◊Ó–°…˙≥… ˜µƒ
+    int num = 0;//”√¿¥º«¬º◊Ó–°…˙≥… ˜
+
+    for (i = 0; i < arcnum; i++) {//∂‘À˘”–µƒ±ﬂΩ¯––±È¿˙
+        int initial = find_vex(vexnum, edges[i].v1);//’“µΩ∏√±ﬂµƒµ⁄“ª∏ˆ∂•µ„µƒ±‡∫≈
         int end = find_vex(vexnum, edges[i].v2);
-        //cout << i << "initial=" << initial << "end=" << end << endl;//检查find_vex是否有问题
-        
-        //如果顶点位置存在且顶点的标记不同，说明不在一个集合中
-        
-        if(initial != -1 && end != -1 && assist[initial].camp != assist[end].camp){
-            miniTree[num] = edges[i];//将该边作为最小生成树的组成部分
-            num++;//计数+1
-            for(int j = 0; j < vexnum; j++){//将新加入的顶点的标记全部更改为一样
-                if(assist[j].camp == assist[end].camp){//如果有顶点标记与新加入边的一个顶点v2的标记相同的
-                    assist[j].camp = assist[initial].camp;// 全部改为边的边的另一个顶点的标记
+        //cout << i << "initial=" << initial << "end=" << end << endl;//ºÏ≤Èfind_vex «∑Ò”–Œ Ã‚
+
+        //»Áπ˚∂•µ„Œª÷√¥Ê‘⁄«“∂•µ„µƒ±Íº«≤ªÕ¨£¨Àµ√˜≤ª‘⁄“ª∏ˆºØ∫œ÷–
+
+        if (initial != -1 && end != -1 && assist[initial].camp != assist[end].camp) {
+            miniTree[num] = edges[i];//Ω´∏√±ﬂ◊˜Œ™◊Ó–°…˙≥… ˜µƒ◊È≥…≤ø∑÷
+            num++;//º∆ ˝+1
+            
+            for (int i = 1; i <= vexnum;i++) {
+                if (assist[i].camp == assist[end].camp && i!=end && assist[i].use==1) {
+                    assist[i].camp = assist[initial].camp;
                 }
             }
-            if (num == vexnum-1) {//如果选择的边的数量和顶点数相差1，说明最小生成树已经形成，退出循环
+            assist[end].camp = assist[initial].camp;
+            assist[end].use = 1;
+            assist[initial].use = 1;
+
+            if (num == vexnum - 1) {//»Áπ˚—°‘Òµƒ±ﬂµƒ ˝¡ø∫Õ∂•µ„ ˝œ‡≤Ó1£¨Àµ√˜◊Ó–°…˙≥… ˜“—æ≠–Œ≥…£¨ÕÀ≥ˆ—≠ª∑
                 break;
             }
         }
     }
-    //输出
-    for(i = 0; i < vexnum - 1; i++){
-        cout << miniTree[i].v1 << ' '<< miniTree[i].v2 << ' ' << miniTree[i].wei << endl;
+    for(i = 0;i < vexnum -1; i++){
+        if (miniTree[i].v1 > miniTree[i].v2) {
+            int temp =miniTree[i].v1;
+            miniTree[i].v1 = miniTree[i].v2;
+            miniTree[i].v2 = temp;0
+        }
     }
-    
+    // ‰≥ˆ
+    for (i = 0; i < vexnum - 1; i++) {
+        cout << miniTree[i].v1 << ' ' << miniTree[i].v2 << ' ' << miniTree[i].wei << endl;
+    }
+
     //std::cout << "Hello, World!\n";
     return 0;
 }

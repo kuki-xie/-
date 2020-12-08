@@ -10,10 +10,19 @@
 using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
-    stack<char> sc;// 定义一个栈的对象
-    char str[50];// 创建一个字符数组
+    char str[51];
+    char ch;// 创建一个字符数组
+    int i = 0;
+    while(1){
+        scanf("%c",&ch);
+        if (ch == '\n') {
+            break;
+        }
+        str[i++] = ch;
+    }
+    str[i++] = '\0';
     char* arr = str;// 为指针分配内存
-    gets(arr);// 输入表达式
+    stack<char> sc;// 定义一个栈的对象
     while(*arr != '\0'){
         if (*arr == '(' || *arr == '[' || *arr == '{') {//把括号的左部分入栈
             sc.push(*arr);
@@ -49,6 +58,9 @@ int main(int argc, const char * argv[]) {
     }
     if (sc.size() == 0) {
         cout << "right" << endl;
+    }
+    else{
+        cout << "wrong" << endl;
     }
     //std::cout << "Hello, World!\n";
     return 0;
