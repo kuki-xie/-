@@ -10,58 +10,60 @@
 using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
-    char str[51];
+    char str[101];// 定义一个字符数组
     char ch;// 创建一个字符数组
     int i = 0;
     while(1){
-        scanf("%c",&ch);
-        if (ch == '\n') {
-            break;
+        scanf("%c",&ch);// 输入字符
+        if (ch == '\n') {// 当读到回车键时
+            break;// 停止跳出循环
         }
-        str[i++] = ch;
+        str[i++] = ch;// 将读入的字符存储到str
     }
-    str[i++] = '\0';
+    str[i++] = '\0';// 添加结束标志
     char* arr = str;// 为指针分配内存
+    //cout << arr; // 检查是否读人成功
+
     stack<char> sc;// 定义一个栈的对象
+    bool flag = true;// 标志，用来判断是否匹配
     while(*arr != '\0'){
         if (*arr == '(' || *arr == '[' || *arr == '{') {//把括号的左部分入栈
-            sc.push(*arr);
+            sc.push(*arr);// 是括号的左部分则压栈
         }
         else if (*arr == ')'){// 遇到')'
-            if (sc.top() == '(') {// 看栈顶元素是不是它的左半部分
-                sc.pop();// 是，则弹出
+            if (sc.top() != '(' || sc.empty()) {// 看栈顶元素不是它的左半部分或此栈此刻不含元素
+                flag = false;// 更改标志为错误
+                break;// 跳出循环
             }
-            else{//不是，则不匹配
-                cout << "wrong" << endl;
-                break;
+            else{//是，则弹栈
+                sc.pop();
             }
         }
         else if (*arr == ']') {// 遇到']'
-            if (sc.top() == '[') {// 看栈顶元素是不是它的左半部分
-                sc.pop();// 是，则弹出
+            if (sc.top() != '[' || sc.empty()) {// 看栈顶元素不是它的左半部分或此栈此刻否含元素
+                flag = false;// 更改标志为错误
+                break;// 跳出循环
             }
             else{
-                cout << "wrong" << endl;
-                break;
+                sc.pop(); // 是，弹栈
             }
         }
         else if (*arr == '}') {// 遇到'}'
-            if (sc.top() == '{') {// 看栈顶元素是不是它的左半部分
-                sc.pop();// 是，则弹出
+            if (sc.top() != '{' || sc.empty()) {// 看栈顶元素不是它的左半部分或此栈此刻不含元素
+                flag = false;// 更改标志为错误
+                break;
             }
             else{
-                cout << "wrong" << endl;
-                break;
+                sc.pop();// 是，弹栈
             }
         }
         arr++;
     }
-    if (sc.size() == 0) {
-        cout << "right" << endl;
-    }
-    else{
+    if (sc.size() != 0 || flag == false) {// 如果此时栈有元素则wrong
         cout << "wrong" << endl;
     }
-    //std::cout << "Hello, World!\n";
+    else{
+        cout << "right" << endl;
+    }
     return 0;
 }
