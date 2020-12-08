@@ -13,9 +13,8 @@ int main(int argc, const char * argv[]) {
     stack<char> sc;// 定义一个栈的对象
     char str[50];// 创建一个字符数组
     char* arr = str;// 为指针分配内存
-    scanf("%c",arr);// 输入表达式
-    int flag = 1;
-    while(*arr != '\0' && flag == 1){
+    gets(arr);// 输入表达式
+    while(*arr != '\0'){
         if (*arr == '(' || *arr == '[' || *arr == '{') {//把括号的左部分入栈
             sc.push(*arr);
         }
@@ -25,7 +24,7 @@ int main(int argc, const char * argv[]) {
             }
             else{//不是，则不匹配
                 cout << "wrong" << endl;
-                flag = 0;
+                break;
             }
         }
         else if (*arr == ']') {// 遇到']'
@@ -34,7 +33,7 @@ int main(int argc, const char * argv[]) {
             }
             else{
                 cout << "wrong" << endl;
-                flag = 0;
+                break;
             }
         }
         else if (*arr == '}') {// 遇到'}'
@@ -43,7 +42,7 @@ int main(int argc, const char * argv[]) {
             }
             else{
                 cout << "wrong" << endl;
-                flag = 0;
+                break;
             }
         }
         arr++;
