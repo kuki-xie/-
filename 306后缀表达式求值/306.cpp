@@ -11,8 +11,8 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
     char str[100];
-    char* arr = str;// 逆波兰式
-    cin >> arr;
+    char* arr = str;// 逆波兰式，指针arr分配了内存呀，就是一个字符型指针，它指向字符数组str的首地址
+    cin >> arr;// 输入
     // cout << arr << endl;
     stack<int> a;// 栈
     int left;// 左操作数
