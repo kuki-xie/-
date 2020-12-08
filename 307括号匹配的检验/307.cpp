@@ -10,7 +10,7 @@
 using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
-    char str[101];// 定义一个字符数组
+    char str[201];// 定义一个字符数组
     char ch;// 创建一个字符数组
     int i = 0;
     while(1){
@@ -40,6 +40,7 @@ int main(int argc, const char * argv[]) {
             }
         }
         else if (*arr == ']') {// 遇到']'
+            // .empty(): true if the underlying container is empty, false otherwise
             if (sc.top() != '[' || sc.empty()) {// 看栈顶元素不是它的左半部分或此栈此刻否含元素
                 flag = false;// 更改标志为错误
                 break;// 跳出循环
@@ -54,7 +55,7 @@ int main(int argc, const char * argv[]) {
                 break;
             }
             else{
-                sc.pop();// 是，弹栈
+                sc.pop();
             }
         }
         arr++;
