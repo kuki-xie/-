@@ -12,17 +12,17 @@ typedef struct TreeNode{// 定义树的结构体
     struct TreeNode* pleft;// 定义左子树
     struct TreeNode* pright;// 定义右子树
 }TreeNode;
-TreeNode* CreateTree(char* arr,int pi){// 创建树
-    if (arr[pi] == '#') {// 表示空格，空格表示空树
+TreeNode* CreateTree(char* arr,int *pi){// 创建树
+    if (arr[*pi] == '#') {// 表示空格，空格表示空树
         return NULL;
     }
     else{
         TreeNode* root = (TreeNode *)malloc(sizeof(TreeNode));// 分配内存
         // 先序遍历
-        root -> val = arr[pi];// 将值赋给结点
-        ++(pi);// 继续读
+        root -> val = arr[*pi];// 将值赋给结点
+        ++(*pi);// 继续读
         root -> pleft = CreateTree(arr, pi);// 将值赋值给左子树
-        ++(pi);// 继续读
+        ++(*pi);// 继续读
         root -> pright = CreateTree(arr, pi);// 将值赋值给右子树
         return root; // 返回结点
     }
@@ -40,7 +40,7 @@ int main(int argc, const char * argv[]) {
     char str[101];// 定义一个字符串
     cin >> str;// 输入字符串回车停止
     int i = 0;
-    TreeNode *root = CreateTree(str, i);
+    TreeNode *root = CreateTree(str, &i);
     InorderTraversal(root);
     //cout << str;// 检查输入
     return 0;
