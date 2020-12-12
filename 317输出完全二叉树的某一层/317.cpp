@@ -25,7 +25,7 @@ int main(){
                     printf("%d ",data[i]);
                 }
             }
-            if (n < pow(2, level)) {// 如果该层不是满的
+            else{// 如果该层不是满的
                 for (i = pow(2, level - 1) - 1; i < n; i++) {// 因为序号是从0，而结点值从1
                     printf("%d ",data[i]);
                 }
