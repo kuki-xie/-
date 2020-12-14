@@ -33,33 +33,38 @@ void PostOrderTraverse(Tree T){// 后序遍历
     PostOrderTraverse(T -> rchild);// 遍历其右子树
     cout << T -> data << ' ';// 输出结点的值
 }
-void BaseLevelInCreateTree(Tree T,int val){// 基于层次遍历序列创建树
+Tree BaseLevelInCreateTree(int* layer,int* inorder,int n){// 基于层次遍历序列创建树
     node* root;
     root = new node;// 分配内存
     root -> data = layer[0];// 根据层次遍历，将根结点的值赋值
-    /*Tree root = new node;// 分配内存
-    root -> lchild = root -> rchild = NULL;// 初始化左右孩子
-    root -> data = layer[0];// 给结点赋值
-    int i = 0, nodei = 0;
-    for(i = 0; i <= n; i++){// 找到层次遍历该值在中序序列中的位置
-        if(val == inoreder[i]){
-            nodei = i;// 记录结点位置
+    int i,k;
+    int l,r;
+    int lcnt = 0,rcnt = 0;// 根节点两端节点数统计
+    int left[1024];// 左子树节点存放数组
+    int right[1024];// 右子树节点存放数组
+    lcnt = rcnt = 0;// 左右两端节点数初始化为0
+    if(n == 0)
+        return NULL;// 如果没节点需要被加入，返回空值
+    for (i = 0; i < n; i++) {
+        if (layer[0] == inoreder[i]) {// 找到对应根节点
             break;
         }
     }
-    int rooti = 0;
-    for (i = 0; i <= n; i++) {// 对中序序列遍历
-        if (root -> data == inoreder[i]) {// 如果发现有结点的值等于根结点的值
-            rooti = i;// 则将序号赋值给根结点的位置
-            break;
+    for (k = 0; k < n; k++) {// 左右子树划分
+        for (l = 0; l < i; l++) {// 中序序列中左子树部分
+            if (inoreder[l] == layer[k]) {
+                left[lcnt++] = layer[k];// 相当于入栈
+            }
+        }
+        for (r = 0; r < n - 1 - i; r++) {
+            if (inoreder[r + i + 1] == layer[k]) {// 中序序列中相当于右子树的部分
+                right[rcnt++] = layer[k];// 相当于入栈
+            }
         }
     }
-    if (nodei < rooti) {// 插入的结点在根结点左侧
-        BaseLevelInCreateTree(root -> lchild, val);// 左子树插入
-    }
-    if (nodei > rooti) {// 插入的结点在根结点的右侧
-        BaseLevelInCreateTree(root -> rchild, val);// 右子树插入
-    }*/
+    root -> lchild = BaseLevelInCreateTree(left, inoreder,lcnt);// 左孩子创建
+    root -> rchild = BaseLevelInCreateTree(right, inoreder + i + 1,rcnt);// 右孩子创建
+    return root;
 }
 int main(int argc, const char * argv[]) {
     
@@ -73,7 +78,7 @@ int main(int argc, const char * argv[]) {
     }
     Tree T = NULL;
     for (i = 0; i < n; i++) {
-        BaseLevelInCreateTree(T,layer[i]);
+        BaseLevelInCreateTree(layer,inoreder,n);
     }
     PreOrderTraverse(T);
     PostOrderTraverse(T);
