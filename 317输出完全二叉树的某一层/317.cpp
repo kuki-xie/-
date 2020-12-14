@@ -20,7 +20,7 @@ int main(){
             printf("empty");
         }
         else{
-            if (n > pow(2, level)) {// 如果这层满的
+            if (n >= (pow(2, level) - 1)) {// 如果这层满的
                 for (i = pow(2,level - 1) - 1; i < pow(2, level) - 1; i++) {// 对这一层全部输出
                     printf("%d ",data[i]);
                 }

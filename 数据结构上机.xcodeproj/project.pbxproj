@@ -12,6 +12,7 @@
 		CC1EAD612583514900281CF5 /* 316.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1EAD602583514900281CF5 /* 316.cpp */; };
 		CC1EAD98258494CD00281CF5 /* 317.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1EAD97258494CD00281CF5 /* 317.cpp */; };
 		CC1EADD12584BEF300281CF5 /* 318.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1EADD02584BEF300281CF5 /* 318.cpp */; };
+		CC26E421258733A900127A04 /* 319.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC26E420258733A900127A04 /* 319.cpp */; };
 		CC4E79B62567E23A00C67871 /* 296.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC4E79B52567E23A00C67871 /* 296.cpp */; };
 		CC508819257DF6DB00663EFE /* 288.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC508818257DF6DB00663EFE /* 288.cpp */; };
 		CC50883E257E059C00663EFE /* 305.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC50883D257E059C00663EFE /* 305.cpp */; };
@@ -71,6 +72,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		CC1EADCC2584BEF300281CF5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		CC26E41C258733A800127A04 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -263,6 +273,8 @@
 		CC1EAD97258494CD00281CF5 /* 317.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 317.cpp; sourceTree = "<group>"; };
 		CC1EADCE2584BEF300281CF5 /* 318二叉树遍历 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "318二叉树遍历"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1EADD02584BEF300281CF5 /* 318.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 318.cpp; sourceTree = "<group>"; };
+		CC26E41E258733A900127A04 /* 319将满二叉树转换为求和树 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "319将满二叉树转换为求和树"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC26E420258733A900127A04 /* 319.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 319.cpp; sourceTree = "<group>"; };
 		CC4E79B32567E23A00C67871 /* 296中心对称的字符串 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "296中心对称的字符串"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4E79B52567E23A00C67871 /* 296.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 296.cpp; sourceTree = "<group>"; };
 		CC508816257DF6DB00663EFE /* 288求next值 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "288求next值"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,6 +345,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CC1EADCB2584BEF300281CF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC26E41B258733A800127A04 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -502,6 +521,7 @@
 				CC1EAD5F2583514900281CF5 /* 316完全二叉树的公共父结点 */,
 				CC1EAD96258494CD00281CF5 /* 317输出完全二叉树的某一层 */,
 				CC1EADCF2584BEF300281CF5 /* 318二叉树遍历 */,
+				CC26E41F258733A900127A04 /* 319将满二叉树转换为求和树 */,
 				CC1A9DE22562D08F0073C6EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -533,6 +553,7 @@
 				CC1EAD5E2583514900281CF5 /* 316完全二叉树的公共父结点 */,
 				CC1EAD95258494CD00281CF5 /* 317输出完全二叉树的某一层 */,
 				CC1EADCE2584BEF300281CF5 /* 318二叉树遍历 */,
+				CC26E41E258733A900127A04 /* 319将满二叉树转换为求和树 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -575,6 +596,14 @@
 				CC1EADD02584BEF300281CF5 /* 318.cpp */,
 			);
 			path = "318二叉树遍历";
+			sourceTree = "<group>";
+		};
+		CC26E41F258733A900127A04 /* 319将满二叉树转换为求和树 */ = {
+			isa = PBXGroup;
+			children = (
+				CC26E420258733A900127A04 /* 319.cpp */,
+			);
+			path = "319将满二叉树转换为求和树";
 			sourceTree = "<group>";
 		};
 		CC4E79B42567E23A00C67871 /* 296中心对称的字符串 */ = {
@@ -815,6 +844,23 @@
 			name = "318二叉树遍历";
 			productName = "318二叉树遍历";
 			productReference = CC1EADCE2584BEF300281CF5 /* 318二叉树遍历 */;
+			productType = "com.apple.product-type.tool";
+		};
+		CC26E41D258733A800127A04 /* 319将满二叉树转换为求和树 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC26E424258733A900127A04 /* Build configuration list for PBXNativeTarget "319将满二叉树转换为求和树" */;
+			buildPhases = (
+				CC26E41A258733A800127A04 /* Sources */,
+				CC26E41B258733A800127A04 /* Frameworks */,
+				CC26E41C258733A800127A04 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "319将满二叉树转换为求和树";
+			productName = "319将满二叉树转换为求和树";
+			productReference = CC26E41E258733A900127A04 /* 319将满二叉树转换为求和树 */;
 			productType = "com.apple.product-type.tool";
 		};
 		CC4E79B22567E23A00C67871 /* 296中心对称的字符串 */ = {
@@ -1163,6 +1209,9 @@
 					CC1EADCD2584BEF300281CF5 = {
 						CreatedOnToolsVersion = 12.1;
 					};
+					CC26E41D258733A800127A04 = {
+						CreatedOnToolsVersion = 12.1;
+					};
 					CC4E79B22567E23A00C67871 = {
 						CreatedOnToolsVersion = 12.1;
 					};
@@ -1259,6 +1308,7 @@
 				CC1EAD5D2583514900281CF5 /* 316完全二叉树的公共父结点 */,
 				CC1EAD94258494CD00281CF5 /* 317输出完全二叉树的某一层 */,
 				CC1EADCD2584BEF300281CF5 /* 318二叉树遍历 */,
+				CC26E41D258733A800127A04 /* 319将满二叉树转换为求和树 */,
 			);
 		};
 /* End PBXProject section */
@@ -1301,6 +1351,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC1EADD12584BEF300281CF5 /* 318.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC26E41A258733A800127A04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC26E421258733A900127A04 /* 319.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1643,6 +1701,22 @@
 			name = Debug;
 		};
 		CC1EADD42584BEF300281CF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CC26E422258733A900127A04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC26E423258733A900127A04 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -2007,6 +2081,15 @@
 			buildConfigurations = (
 				CC1EADD32584BEF300281CF5 /* Debug */,
 				CC1EADD42584BEF300281CF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC26E424258733A900127A04 /* Build configuration list for PBXNativeTarget "319将满二叉树转换为求和树" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC26E422258733A900127A04 /* Debug */,
+				CC26E423258733A900127A04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
