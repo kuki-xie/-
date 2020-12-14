@@ -25,7 +25,7 @@ int insert(int target){// 定义插入关键字
         return -1;// 返回-1，表示哈希表已满
     }
     int key = target % p;// 关键字位置，由除留余数法构造哈希函数
-    for (int i = key; i < m - 1; i++) {
+    for (int i = key; i < m - 1; i++) {// 从这个位置往后开始遍历
         if (hashMap[i] == target) {// 如果输入的关键字在哈希表中已存在
             return i;// 输出该关键字在哈希表中的位置
         }
@@ -35,9 +35,9 @@ int insert(int target){// 定义插入关键字
             return i;// 输出关键字在哈希表中的位置
         }
     }
-    for (int i = 0; i < key; i++) {
-        if (hashMap[i] == target) {
-            return i;
+    for (int i = 0; i < key; i++) {// 如果key后位置没有，那就回头再找
+        if (hashMap[i] == target) {// 如果找到了这个结点的值
+            return i;// 返回位置
         }
         if (hashMap[i] == -1) {
             hashMap[i] = target;
