@@ -33,7 +33,7 @@ void PostOrderTraverse(Tree T){// 后序遍历
     PostOrderTraverse(T -> rchild);// 遍历其右子树
     cout << T -> data << ' ';// 输出结点的值
 }
-Tree BaseLevelInCreateTree(int* layer,int* inorder,int n){// 基于层次遍历序列创建树
+Tree BaseLevelInCreateTree(int* layer,int* inoreder,int n){// 基于层次遍历序列创建树
     node* root;
     root = new node;// 分配内存
     root -> data = layer[0];// 根据层次遍历，将根结点的值赋值
@@ -77,9 +77,7 @@ int main(int argc, const char * argv[]) {
         cin >> inoreder[i];// 输入中序序列
     }
     Tree T = NULL;
-    for (i = 0; i < n; i++) {
-        BaseLevelInCreateTree(layer,inoreder,n);
-    }
+    T = BaseLevelInCreateTree(layer,inoreder,n);
     PreOrderTraverse(T);
     PostOrderTraverse(T);
     return 0;

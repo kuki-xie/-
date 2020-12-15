@@ -13,7 +13,7 @@
 		CC1EAD98258494CD00281CF5 /* 317.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1EAD97258494CD00281CF5 /* 317.cpp */; };
 		CC1EADD12584BEF300281CF5 /* 318.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC1EADD02584BEF300281CF5 /* 318.cpp */; };
 		CC26E421258733A900127A04 /* 319.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC26E420258733A900127A04 /* 319.cpp */; };
-		CC26E45E25874FD000127A04 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC26E45D25874FD000127A04 /* main.cpp */; };
+		CC26E45E25874FD000127A04 /* 320.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC26E45D25874FD000127A04 /* 320.cpp */; };
 		CC4E79B62567E23A00C67871 /* 296.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC4E79B52567E23A00C67871 /* 296.cpp */; };
 		CC508819257DF6DB00663EFE /* 288.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC508818257DF6DB00663EFE /* 288.cpp */; };
 		CC50883E257E059C00663EFE /* 305.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC50883D257E059C00663EFE /* 305.cpp */; };
@@ -356,7 +356,7 @@
 		CC26E41E258733A900127A04 /* 319将满二叉树转换为求和树 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "319将满二叉树转换为求和树"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC26E420258733A900127A04 /* 319.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 319.cpp; sourceTree = "<group>"; };
 		CC26E45B25874FD000127A04 /* 320二叉树的不同形态 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "320二叉树的不同形态"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC26E45D25874FD000127A04 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CC26E45D25874FD000127A04 /* 320.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 320.cpp; sourceTree = "<group>"; };
 		CC4E79B32567E23A00C67871 /* 296中心对称的字符串 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "296中心对称的字符串"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4E79B52567E23A00C67871 /* 296.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 296.cpp; sourceTree = "<group>"; };
 		CC508816257DF6DB00663EFE /* 288求next值 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "288求next值"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -777,7 +777,7 @@
 		CC26E45C25874FD000127A04 /* 320二叉树的不同形态 */ = {
 			isa = PBXGroup;
 			children = (
-				CC26E45D25874FD000127A04 /* main.cpp */,
+				CC26E45D25874FD000127A04 /* 320.cpp */,
 			);
 			path = "320二叉树的不同形态";
 			sourceTree = "<group>";
@@ -1766,7 +1766,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC26E45E25874FD000127A04 /* main.cpp in Sources */,
+				CC26E45E25874FD000127A04 /* 320.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

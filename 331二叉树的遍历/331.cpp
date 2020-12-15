@@ -7,23 +7,23 @@
 
 #include <iostream>
 using namespace std;
-struct NODE{
+typedef struct node{
     int key;// 记录节点的关键字
-    struct NODE* lchild;// 节点的左孩子
-    struct NODE* rchild;// 节点的右孩子
-}node,*Tree;
-void initTree(Tree &T,int data){
+    struct node* lchild;// 节点的左孩子
+    struct node* rchild;// 节点的右孩子
+}Node, * Tree;
+void ins(Tree &T,int data){
     if (!T) {// 如果树为初始化
-        T = (Tree)malloc(sizeof(node));
+        T = (Tree)malloc(sizeof(Node));
         T -> key = data;// 将关键字存入节点的data
         T -> lchild = NULL;// 初始化左孩子
         T -> rchild = NULL;// 初始化右孩子
     }
     if (data < T -> key) {// 如果待插入的值小于节点的值
-        initTree(T -> lchild,data);
+        ins(T -> lchild,data);
     }
     if (data > T -> key) {
-        init(T -> rchild,data);
+        ins(T -> rchild,data);
     }
 }
 void PreOrderTraverse(Tree T){
@@ -58,7 +58,7 @@ int main(int argc, const char * argv[]) {
     Tree T = NULL;// 声明一个树
     for (i = 0; i < n; i++) {
         cin >> a[i];
-        initTree(T,a[i]);// 构建二叉排序树
+        ins(T,a[i]);// 构建二叉排序树
     }
     PreOrderTraverse(T);
     cout << endl;
