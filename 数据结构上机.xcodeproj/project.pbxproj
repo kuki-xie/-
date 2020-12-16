@@ -41,6 +41,8 @@
 		CCE77BF9258997D7008A56D0 /* 332.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE77BF8258997D7008A56D0 /* 332.cpp */; };
 		CCE77C482589D9DE008A56D0 /* 333.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE77C472589D9DE008A56D0 /* 333.cpp */; };
 		CCE77C992589E8E7008A56D0 /* 334.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE77C982589E8E7008A56D0 /* 334.cpp */; };
+		CCE77CEC258A4499008A56D0 /* 324.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE77CEB258A4499008A56D0 /* 324.cpp */; };
+		CCE77D41258A5082008A56D0 /* 325.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE77D40258A5082008A56D0 /* 325.cpp */; };
 		CCFA0F532567EDDE00ACF3E1 /* 297.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCFA0F522567EDDE00ACF3E1 /* 297.cpp */; };
 		CCFA0F642567F1A300ACF3E1 /* 295.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCFA0F632567F1A300ACF3E1 /* 295.cpp */; };
 /* End PBXBuildFile section */
@@ -352,6 +354,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		CCE77CE7258A4499008A56D0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		CCE77D3C258A5082008A56D0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		CCFA0F4E2567EDDE00ACF3E1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,6 +461,10 @@
 		CCE77C472589D9DE008A56D0 /* 333.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 333.cpp; sourceTree = "<group>"; };
 		CCE77C962589E8E7008A56D0 /* 334分组统计 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "334分组统计"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE77C982589E8E7008A56D0 /* 334.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 334.cpp; sourceTree = "<group>"; };
+		CCE77CE9258A4499008A56D0 /* 324图的广度优先遍历 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "324图的广度优先遍历"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE77CEB258A4499008A56D0 /* 324.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 324.cpp; sourceTree = "<group>"; };
+		CCE77D3E258A5082008A56D0 /* 325图的深度优先遍历 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "325图的深度优先遍历"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE77D40258A5082008A56D0 /* 325.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 325.cpp; sourceTree = "<group>"; };
 		CCFA0F502567EDDE00ACF3E1 /* 297最小周期串 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "297最小周期串"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFA0F522567EDDE00ACF3E1 /* 297.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 297.cpp; sourceTree = "<group>"; };
 		CCFA0F612567F1A300ACF3E1 /* 295有序表的合并去重 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "295有序表的合并去重"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -686,6 +710,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCE77CE6258A4499008A56D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE77D3B258A5082008A56D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CCFA0F4D2567EDDE00ACF3E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -742,6 +780,8 @@
 				CCE77BF7258997D7008A56D0 /* 332二叉排序树的判定 */,
 				CCE77C462589D9DE008A56D0 /* 333找位置 */,
 				CCE77C972589E8E7008A56D0 /* 334分组统计 */,
+				CCE77CEA258A4499008A56D0 /* 324图的广度优先遍历 */,
+				CCE77D3F258A5082008A56D0 /* 325图的深度优先遍历 */,
 				CC1A9DE22562D08F0073C6EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -785,6 +825,8 @@
 				CCE77BF6258997D7008A56D0 /* 332二叉排序树的判定 */,
 				CCE77C452589D9DE008A56D0 /* 333找位置 */,
 				CCE77C962589E8E7008A56D0 /* 334分组统计 */,
+				CCE77CE9258A4499008A56D0 /* 324图的广度优先遍历 */,
+				CCE77D3E258A5082008A56D0 /* 325图的深度优先遍历 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1059,6 +1101,22 @@
 				CCE77C982589E8E7008A56D0 /* 334.cpp */,
 			);
 			path = "334分组统计";
+			sourceTree = "<group>";
+		};
+		CCE77CEA258A4499008A56D0 /* 324图的广度优先遍历 */ = {
+			isa = PBXGroup;
+			children = (
+				CCE77CEB258A4499008A56D0 /* 324.cpp */,
+			);
+			path = "324图的广度优先遍历";
+			sourceTree = "<group>";
+		};
+		CCE77D3F258A5082008A56D0 /* 325图的深度优先遍历 */ = {
+			isa = PBXGroup;
+			children = (
+				CCE77D40258A5082008A56D0 /* 325.cpp */,
+			);
+			path = "325图的深度优先遍历";
 			sourceTree = "<group>";
 		};
 		CCFA0F512567EDDE00ACF3E1 /* 297最小周期串 */ = {
@@ -1658,6 +1716,40 @@
 			productReference = CCE77C962589E8E7008A56D0 /* 334分组统计 */;
 			productType = "com.apple.product-type.tool";
 		};
+		CCE77CE8258A4499008A56D0 /* 324图的广度优先遍历 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCE77CED258A4499008A56D0 /* Build configuration list for PBXNativeTarget "324图的广度优先遍历" */;
+			buildPhases = (
+				CCE77CE5258A4499008A56D0 /* Sources */,
+				CCE77CE6258A4499008A56D0 /* Frameworks */,
+				CCE77CE7258A4499008A56D0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "324图的广度优先遍历";
+			productName = "324图的广度优先遍历";
+			productReference = CCE77CE9258A4499008A56D0 /* 324图的广度优先遍历 */;
+			productType = "com.apple.product-type.tool";
+		};
+		CCE77D3D258A5082008A56D0 /* 325图的深度优先遍历 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCE77D42258A5082008A56D0 /* Build configuration list for PBXNativeTarget "325图的深度优先遍历" */;
+			buildPhases = (
+				CCE77D3A258A5082008A56D0 /* Sources */,
+				CCE77D3B258A5082008A56D0 /* Frameworks */,
+				CCE77D3C258A5082008A56D0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "325图的深度优先遍历";
+			productName = "325图的深度优先遍历";
+			productReference = CCE77D3E258A5082008A56D0 /* 325图的深度优先遍历 */;
+			productType = "com.apple.product-type.tool";
+		};
 		CCFA0F4F2567EDDE00ACF3E1 /* 297最小周期串 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCFA0F562567EDDE00ACF3E1 /* Build configuration list for PBXNativeTarget "297最小周期串" */;
@@ -1802,6 +1894,12 @@
 					CCE77C952589E8E7008A56D0 = {
 						CreatedOnToolsVersion = 12.1;
 					};
+					CCE77CE8258A4499008A56D0 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					CCE77D3D258A5082008A56D0 = {
+						CreatedOnToolsVersion = 12.1;
+					};
 					CCFA0F4F2567EDDE00ACF3E1 = {
 						CreatedOnToolsVersion = 12.1;
 					};
@@ -1859,6 +1957,8 @@
 				CCE77BF5258997D7008A56D0 /* 332二叉排序树的判定 */,
 				CCE77C442589D9DD008A56D0 /* 333找位置 */,
 				CCE77C952589E8E7008A56D0 /* 334分组统计 */,
+				CCE77CE8258A4499008A56D0 /* 324图的广度优先遍历 */,
+				CCE77D3D258A5082008A56D0 /* 325图的深度优先遍历 */,
 			);
 		};
 /* End PBXProject section */
@@ -2133,6 +2233,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCE77C992589E8E7008A56D0 /* 334.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE77CE5258A4499008A56D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE77CEC258A4499008A56D0 /* 324.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE77D3A258A5082008A56D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE77D41258A5082008A56D0 /* 325.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2810,6 +2926,38 @@
 			};
 			name = Release;
 		};
+		CCE77CEE258A4499008A56D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CCE77CEF258A4499008A56D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CCE77D43258A5082008A56D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CCE77D44258A5082008A56D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		CCFA0F542567EDDE00ACF3E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3156,6 +3304,24 @@
 			buildConfigurations = (
 				CCE77C9B2589E8E7008A56D0 /* Debug */,
 				CCE77C9C2589E8E7008A56D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCE77CED258A4499008A56D0 /* Build configuration list for PBXNativeTarget "324图的广度优先遍历" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE77CEE258A4499008A56D0 /* Debug */,
+				CCE77CEF258A4499008A56D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCE77D42258A5082008A56D0 /* Build configuration list for PBXNativeTarget "325图的深度优先遍历" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE77D43258A5082008A56D0 /* Debug */,
+				CCE77D44258A5082008A56D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
