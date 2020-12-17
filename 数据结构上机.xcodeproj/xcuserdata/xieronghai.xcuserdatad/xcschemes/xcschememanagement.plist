@@ -159,6 +159,11 @@
 			<key>orderHint</key>
 			<integer>38</integer>
 		</dict>
+		<key>327最短路径.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>39</integer>
+		</dict>
 		<key>328哈希表.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -193,6 +198,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>35</integer>
+		</dict>
+		<key>335堆排序.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>40</integer>
 		</dict>
 		<key>数据结构上机.xcscheme_^#shared#^_</key>
 		<dict>
