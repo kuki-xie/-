@@ -66,6 +66,15 @@ Tree BaseLevelInCreateTree(int* layer,int* inoreder,int n){// 基于层次遍历
     root -> rchild = BaseLevelInCreateTree(right, inoreder + i + 1,rcnt);// 右孩子创建
     return root;
 }
+void TellLeaf(Tree T){
+    if(T != NULL){
+        if (T -> lchild == NULL && T -> rchild == NULL) {
+            cout << T -> data << ' ';
+        }
+        TellLeaf(T -> lchild);
+        TellLeaf(T -> rchild);
+    }
+}
 int main(int argc, const char * argv[]) {
     
     cin >> n;
@@ -78,7 +87,10 @@ int main(int argc, const char * argv[]) {
     }
     Tree T = NULL;
     T = BaseLevelInCreateTree(layer,inoreder,n);
+    TellLeaf(T);
+    cout << endl;
     PreOrderTraverse(T);
+    cout << endl;
     PostOrderTraverse(T);
     return 0;
 }
