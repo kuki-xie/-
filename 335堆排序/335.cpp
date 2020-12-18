@@ -36,3 +36,33 @@ int main(int argc, const char * argv[]) {
     }
     return 0;
 }
+
+/*#include <iostream>
+using namespace std;
+int a[100];// 待排序数据元素个数，小于100
+int parent(int n){
+    return (n - 1) / 2;
+}
+void HeapSort(int n, int data[]){
+    for (int i = 0; i < n; i++) {
+        int t = i;
+        while (t != 0 && data[parent(t)] > data[t]) {
+            int temp = data[t];
+            data[t] = data[parent(t)];
+            data[parent(t)] = temp;
+            t = parent(t);
+        }
+    }
+}
+int main(int argc, const char * argv[]) {
+    int n,i;
+    cin >> n;// 输入n个顶点
+    for (i = 0; i < n; i++) {
+        cin >> a[i];// 输入待排序的元素
+    }
+    HeapSort(n,a);
+    for (i = 0; i < n; i++) {
+        cout << a[i] << ' ';
+    }
+    return 0;
+}*/
